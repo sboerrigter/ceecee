@@ -13,7 +13,7 @@ class App extends Component {
   componentDidMount() {
     const facebook = new Facebook();
 
-    facebook.getEvents().then(events => {
+    facebook.getEvents('upcoming').then(events => {
       this.setState({events: events});
     });
   }
