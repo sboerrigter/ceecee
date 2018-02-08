@@ -14,6 +14,8 @@ export default class Facebook
   }
 
   getEvents() {
-    return this.get('theceespot/events');
+    return this.get('theceespot/events', {
+      time_filter: 'upcoming',
+    });
   }
 }
