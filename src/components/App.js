@@ -5,7 +5,7 @@ class App extends Component {
     return (
       <div className="app">
         <h1>CeeCee events</h1>
-        <p>The creative community of Enschede</p>
+        <p>Upcomming events in the creative community of Enschede</p>
       </div>
     );
   }
