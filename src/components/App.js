@@ -29,10 +29,9 @@ class App extends Component {
 
           <p>{item.start_time}</p>
 
-
           <p>{item.description}</p>
 
-          <a className="button" href="https://www.facebook.com/events/{item.id}">
+          <a className='button' href={"https://www.facebook.com/events/" + item.id} target="_blank">
             More info &amp; RSVP
           </a>
         </div>
@@ -42,7 +41,7 @@ class App extends Component {
     return (
       <div className="app">
         <h1>CeeCee events</h1>
-        <p>Upcomming events in the creative community of Enschede</p>
+        <p>Upcoming events in the creative community of Enschede</p>
 
         {eventsList}
       </div>
