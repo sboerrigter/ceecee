@@ -24,7 +24,18 @@ class App extends Component {
     if (this.state.events) {
       eventsList = this.state.events.map(item => {
         console.log(item);
-        return <div key="{item.id}">{item.name}</div>
+        return <div key="{item.id}">
+          <h2>{item.name}</h2>
+
+          <p>{item.start_time}</p>
+
+
+          <p>{item.description}</p>
+
+          <a className="button" href="https://www.facebook.com/events/{item.id}">
+            More info &amp; RSVP
+          </a>
+        </div>
       });
     }
 
