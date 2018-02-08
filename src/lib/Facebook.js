@@ -2,6 +2,12 @@ import axios from 'axios';
 
 export default class Facebook
 {
+  /**
+   * Get something from the Facebook Graph API
+   *
+   * @param {string} endpoint
+   * @return {array.<Object>} Response data
+   */
   get(endpoint, params = {}) {
     return axios.request({
       method: 'get',
@@ -13,9 +19,25 @@ export default class Facebook
     });
   }
 
-  getEvents() {
+  /**
+   * Get events
+   *
+   * @param {string} type Can be 'upcoming' or 'past'
+   * @return {array.<number>} List of events
+   */
+  getEvents(type) {
     return this.get('theceespot/events', {
-      time_filter: 'upcoming',
+      time_filter: type,
     });
   }
+
+  /**
+   * Get events
+   *
+   * @param {number} id Event ID
+   * @return {Object} Event details
+   */
+   getEvent(id) {
+     return this.get('event/' + id);
+   }
 }
